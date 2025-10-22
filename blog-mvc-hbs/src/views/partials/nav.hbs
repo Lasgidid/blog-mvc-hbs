@@ -1,0 +1,15 @@
+<header class="nav">
+  <a href="/" class="brand">MyBlog</a>
+  <nav>
+    {{#if currentUser}}
+      <span>Hi, {{currentUser.username}}</span>
+      <a href="/newblog/" class="btn">New Post</a>
+      <form action="/logout" method="post" style="display:inline">
+        <button class="btn">Logout</button>
+      </form>
+    {{else}}
+      <a href="/login" class="btn">Login</a>
+    {{/if}}
+    <button id="theme-toggle" class="btn">Toggle Dark Mode</button>
+  </nav>
+</header>

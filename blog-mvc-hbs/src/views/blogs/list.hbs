@@ -1,0 +1,16 @@
+<h1>All Posts</h1>
+
+{{#if blogs.length}}
+<ul class="cards">
+  {{#each blogs}}
+    <li class="card">
+      <h2><a href="/blogs/{{this._id}}" class="blog-link">{{this.title}}</a></h2>
+      <p class="meta">By {{this.author}} • {{this.createdAt}}</p>
+      <p>{{this.body}}</p>
+      <a href="/blogs/{{this._id}}" class="btn">Read More</a>
+    </li>
+  {{/each}}
+</ul>
+{{else}}
+<p>No posts yet.</p>
+{{/if}}

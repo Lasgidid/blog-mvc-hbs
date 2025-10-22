@@ -1,0 +1,14 @@
+<header class="nav">
+  <a href="/" class="brand">DY/DX BLOG PAGE BY ME SCHRÖDINGER</a>
+  <nav>
+    {{#if currentUser}}
+      <span class="user-greet">Hi, {{currentUser.username}}</span>
+      <a href="/newblog/" class="btn btn-primary">New Post</a>
+      <form action="/logout" method="post" style="display:inline;">
+        <button class="btn btn-logout">Logout</button>
+      </form>
+    {{else}}
+      <a href="/login" class="btn btn-login">Login</a>
+    {{/if}}
+  </nav>
+</header>

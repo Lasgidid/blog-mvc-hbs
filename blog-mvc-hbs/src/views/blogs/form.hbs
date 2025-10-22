@@ -1,0 +1,14 @@
+<h1>{{#if (eq mode 'edit')}}Edit Post{{else}}New Post{{/if}}</h1>
+
+<form action="{{#if (eq mode 'edit')}}/blogs/{{blog._id}}?_method=PUT{{else}}/blogs{{/if}}" method="post">
+  <label>Title
+    <input type="text" name="title" value="{{blog.title}}" required />
+  </label>
+  <label>Author
+    <input type="text" name="author" value="{{blog.author}}" />
+  </label>
+  <label>Body
+    <textarea name="body" rows="8" required>{{blog.body}}</textarea>
+  </label>
+  <button class="btn">Save</button>
+</form>
